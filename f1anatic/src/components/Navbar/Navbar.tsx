@@ -39,7 +39,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="bg-gray-800 py-4 sticky top-0">
+        <div className="bg-gray-800 py-6 sticky top-0">
             <Container>
                 <div className="flex flex-row text-white px-8 lg:px-24">
                     <div className="flex flex-row justify-between w-full">
