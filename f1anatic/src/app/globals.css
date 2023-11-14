@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .linkStyle {
+        @apply text-white relative  
+    }
+
+    .linkStyle::after {
+        @apply content-[''] bg-gray-200 h-[1.5px] w-[0] left-0 -bottom-[5px]
+        rounded-xl absolute duration-300
+    }
+
+    .linkStyle:hover::after {
+        @apply w-[100%] 
+    }
+}
