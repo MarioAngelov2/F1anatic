@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="px-8 lg:px-24 h-full">
             {/* First row */}
             <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 items-center mt-8">
-                <div className="flex-1 mt-12">
+                <div className="flex-1 lg:mt-12">
                     <h1 className="text-4xl font-bold">
                         Formula 1 Car Release Dates for the 2023 Season
                     </h1>
@@ -44,7 +44,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-            <p className="mt-4">Posted 9 months ago</p>
+            <p className="mt-4 text-xs md:text-base">Posted 9 months ago</p>
         </div>
     );
 };
