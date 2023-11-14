@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Hero = () => {
     return (
-        <div className="px-8 lg:px-24 min-h-screen">
+        <div className="px-8 lg:px-24 h-full">
             {/* First row */}
             <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 items-center mt-8">
                 <div className="flex-1 mt-12">
