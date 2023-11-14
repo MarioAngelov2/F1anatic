@@ -4,15 +4,24 @@
 
 @layer components {
     .linkStyle {
-        @apply text-white relative  
+        @apply text-white relative;
     }
 
     .linkStyle::after {
         @apply content-[''] bg-gray-200 h-[1.5px] w-[0] left-0 -bottom-[5px]
-        rounded-xl absolute duration-300
+        rounded-xl absolute duration-300;
     }
 
     .linkStyle:hover::after {
-        @apply w-[100%] 
+        @apply w-[100%];
+    }
+
+    .footerLinks {
+        @apply hover:text-gray-400 transition duration-300 ease-in-out;
+    }
+
+    .subscribeBtn {
+        @apply text-sm border border-red-400 text-red-400 px-4 py-2 mt-4 hover:bg-red-400 transition 
+        duration-300 ease-in-out hover:text-black tracking-wide;
     }
 }
