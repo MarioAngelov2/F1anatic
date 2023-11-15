@@ -1,0 +1,11 @@
+{
+  "id": "mig_cla851qr00th1dr6cv10",
+  "checksum": "1:274d9d1244221a319c62da480e3a3ccdcbd69b66a8993a4fd6ee650510744d3b",
+  "operations": [
+    {
+      "addTable": {
+        "table": "blogs"
+      }
+    }
+  ]
+}

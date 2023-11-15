@@ -1,0 +1,18 @@
+{
+  "id": "mig_cla8i32r00th1dr6d150",
+  "parentID": "mig_cla8f1il3lh3v7vbpe40",
+  "checksum": "1:b4b99e7e1094ec36bcea252658e44f974b9c9a876a8208fc502ea96e0287bd1c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "userId",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "null"
+        },
+        "table": "blogs"
+      }
+    }
+  ]
+}

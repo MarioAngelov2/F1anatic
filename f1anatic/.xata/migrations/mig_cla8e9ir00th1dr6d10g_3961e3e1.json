@@ -1,0 +1,16 @@
+{
+  "id": "mig_cla8e9ir00th1dr6d10g",
+  "parentID": "mig_cla8e22r00th1dr6d0vg",
+  "checksum": "1:3961e3e10f51b5503a0b16ee472fdb7342bd8dfc9840ffd7cfe6e8fa6bd6aaa9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "blogArticle",
+          "type": "text"
+        },
+        "table": "blogs"
+      }
+    }
+  ]
+}
