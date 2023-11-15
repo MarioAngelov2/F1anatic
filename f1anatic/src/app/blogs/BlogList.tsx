@@ -2,13 +2,10 @@ import { BlogsRecord } from "@/xata";
 import React from "react";
 import Image from "next/image";
 import moment from "moment";
+import { truncateText } from "@/utils/truncateText";
 
 type BlogListProps = {
     blogs: BlogsRecord[];
-};
-
-const truncateText = (text: string, maxLength: number) => {
-    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
 };
 
 const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
@@ -32,7 +29,9 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
                         </div>
                     ))}
                     <div className="flex flex-col px-2 py-2 md:py-4 max-w-[60%] max-h-[300px] justify-between">
-                        <h1 className="font-bold text-lg md:text-xl">{blog.blogTitle}</h1>
+                        <h1 className="font-bold text-lg md:text-xl">
+                            {blog.blogTitle}
+                        </h1>
                         <p className="text-xs md:text-base md:mt-2">
                             {truncateText(blog.blogSecondTitle!, 100)}
                         </p>
