@@ -7,6 +7,10 @@ type BlogListProps = {
     blogs: BlogsRecord[];
 };
 
+const truncateText = (text: string, maxLength: number) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+};
+
 const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-4">
@@ -27,13 +31,13 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
                             />
                         </div>
                     ))}
-                    <div className="flex flex-col px-2 py-4 max-w-[60%] justify-between">
-                        <h1 className="font-bold text-xl">{blog.blogTitle}</h1>
-                        <p className="text-sm md:text-base mt-2">
-                            {blog.blogSecondTitle}
+                    <div className="flex flex-col px-2 py-2 md:py-4 max-w-[60%] max-h-[300px] justify-between">
+                        <h1 className="font-bold text-lg md:text-xl">{blog.blogTitle}</h1>
+                        <p className="text-xs md:text-base md:mt-2">
+                            {truncateText(blog.blogSecondTitle!, 100)}
                         </p>
                         <div>
-                            <p className="text-sm text-gray-400 mt-2 lg:mt-0 italic">
+                            <p className="text-xs md:text-sm text-gray-400 mt-2 lg:mt-0 italic">
                                 Posted {moment(blog.createdAt).fromNow()}
                             </p>
                         </div>
