@@ -7,7 +7,6 @@ export const navLinks = [
     { name: ".drivers", path: "/" },
     { name: ".teams", path: "/" },
     { name: ".contact", path: "/" },
-    { name: ".login", path: "/sign-in" },
 ];
 
 export const webLinks = [
