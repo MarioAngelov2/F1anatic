@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Mario-Angelov-s-workspace-hr2v9v.eu-central-1.xata.sh/db/f1antastic",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
