@@ -7,9 +7,11 @@ import { navLinks } from "@/utils/data";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoCloseOutline } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useUser, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
+    const { user, isLoaded } = useUser();
 
     const handleMoblieMenu = () => {
         setIsMobile((prev) => !prev);
@@ -67,8 +69,28 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             ))}
+                            {isLoaded && user ? (
+                                <UserButton />
+                            ) : (
+                                <li>
+                                    <Link className="linkStyle" href="/sign-in">
+                                        .login
+                                    </Link>
+                                </li>
+                            )}
                         </ul>
-                        <RxHamburgerMenu onClick={handleMoblieMenu} size={32} className="lg:hidden"/>
+                        <div className="lg:hidden flex flex-row-reverse gap-6 items-center">
+                            <RxHamburgerMenu
+                                onClick={handleMoblieMenu}
+                                size={32}
+                                className="lg:hidden"
+                            />
+                            {isLoaded && user ? (
+                                <UserButton />
+                            ) : (
+                                <Link href="/sign-in">.login</Link>
+                            )}
+                        </div>
                     </div>
                 </div>
                 <AnimatePresence>
