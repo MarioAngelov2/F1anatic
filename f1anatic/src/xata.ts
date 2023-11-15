@@ -6,7 +6,19 @@ import type {
   XataRecord,
 } from "@xata.io/client";
 
-const tables = [{ name: "blogs", columns: [] }] as const;
+const tables = [
+  {
+    name: "blogs",
+    columns: [
+      { name: "blogTitle", type: "string" },
+      { name: "blogArticle", type: "text" },
+      { name: "blogImages", type: "file[]" },
+      { name: "createdAt", type: "datetime" },
+      { name: "userId", type: "string", notNull: true, defaultValue: "null" },
+      { name: "blogSecondTitle", type: "string" },
+    ],
+  },
+] as const;
 
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
