@@ -3,7 +3,7 @@ import image2 from "../../public/main (2).png";
 import image3 from "../../public/main (3).png";
 
 export const navLinks = [
-    { name: ".blogs", path: "/" },
+    { name: ".blogs", path: "/blogs" },
     { name: ".drivers", path: "/" },
     { name: ".teams", path: "/" },
     { name: ".contact", path: "/" },
