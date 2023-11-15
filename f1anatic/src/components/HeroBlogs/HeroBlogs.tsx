@@ -39,7 +39,7 @@ const HeroBlogs = () => {
                 </div>
                 <div className="flex justify-center">
                     <Link
-                        href="/"
+                        href="/blogs"
                         className="flex items-center justify-center gap-2 py-6 w-full bg-gray-100 
                         font-semibold text-gray-400 hover:text-black transition duration-300 ease-in-out
                         group mt-8 mb-6 lg:mb-0 text-base lg:text-lg"
