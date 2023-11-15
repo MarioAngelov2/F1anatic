@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.27.1",
+    "@clerk/themes": "^1.7.9",
+    "@xata.io/client": "^0.27.0",
     "framer-motion": "^10.16.5",
     "next": "14.0.2",
     "react": "^18",
