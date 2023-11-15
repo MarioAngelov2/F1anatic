@@ -10,7 +10,6 @@ const Blogs = async () => {
     return (
         <div className="px-8 mt-7 h-screen">
             <Container>
-                {/* <BlogList blogs={blogs}/> */}
                 <BlogList blogs={blogsData} />
             </Container>
         </div>
