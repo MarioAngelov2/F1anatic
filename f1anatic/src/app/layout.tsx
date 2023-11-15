@@ -3,6 +3,8 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { ClerkProvider } from "@clerk/nextjs";
+
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -21,14 +23,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body className={montserrat.className}>
-                <div className="flex flex-col min-h-screen">
-                    <Navbar />
-                    <main className="flex-grow">{children}</main>
-                    <Footer />
-                </div>
-            </body>
-        </html>
+        <ClerkProvider>
+            <html lang="en">
+                <body className={montserrat.className}>
+                    <div className="flex flex-col min-h-screen">
+                        <Navbar />
+                        <main className="flex-grow">{children}</main>
+                        <Footer />
+                    </div>
+                </body>
+            </html>
+        </ClerkProvider>
     );
 }
