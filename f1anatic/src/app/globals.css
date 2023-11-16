@@ -34,4 +34,8 @@
         @apply hover:border border-gray-800 hover:bg-white 
         transition duration-300 ease-in-out hover:text-black;
     }
+
+    .formInput {
+        @apply border w-[100%] outline-none py-3 px-2
+    }
 }
