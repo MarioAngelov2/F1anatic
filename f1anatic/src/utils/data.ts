@@ -3,10 +3,11 @@ import image2 from "../../public/main (2).png";
 import image3 from "../../public/main (3).png";
 
 export const navLinks = [
-    { name: ".blogs", path: "/blogs" },
-    { name: ".drivers", path: "/" },
-    { name: ".teams", path: "/" },
-    { name: ".contact", path: "/" },
+    { name: ".блог", path: "/blogs" },
+    { name: ".пилоти", path: "/" },
+    { name: ".отбори", path: "/" },
+    { name: ".контакти", path: "/" },
+    { name: ".добави блог", path: "/add-blog" },
 ];
 
 export const webLinks = [
