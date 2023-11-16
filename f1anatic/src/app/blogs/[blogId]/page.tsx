@@ -13,7 +13,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
     return (
         <div className="relative">
             {blogData?.blogImages?.map((image) => (
-                <div key={image.id} className="relative">
+                <div key={image.id} className="relative overflow-hidden">
                     <div className="h-[500px] flex items-center justify-center relative overflow-hidden">
                         <Image
                             src={image.url}
@@ -21,13 +21,13 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
                             width={1200}
                             height={500}
                             className="object-cover w-screen min-w-[1000px] max-h-[500px] -z-10 
-                            items-center justify-center fixed"
+                            items-center justify-center fixed overflow-hidden"
                         />
                         <div className="absolute inset-auto bg-black opacity-50 w-full h-full"></div>
                     </div>
                     <div
                         className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-                        text-white lg:text-center pl-10 pr-10 w-full md:w-[80%] xl:w-[70%] 2xl:w-[50%]"
+                        text-white lg:text-center pl-10 pr-10  md:w-[80%] xl:w-[70%] 2xl:w-[50%]"
                     >
                         <h1 className="text-4xl font-bold">
                             {blogData.blogTitle}
@@ -53,7 +53,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
                                         alt={image.name}
                                         width={1200}
                                         height={300}
-                                        className="object-cover md:h-[500px] w-[70%]"
+                                        className="object-cover md:h-[500px] w-[100%] md:w-[70%]"
                                     />
                                 </div>
                             ))}
