@@ -74,7 +74,7 @@ const Navbar = () => {
                             ) : (
                                 <li>
                                     <Link className="linkStyle" href="/sign-in">
-                                        .login
+                                        .вход
                                     </Link>
                                 </li>
                             )}

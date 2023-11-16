@@ -16,13 +16,14 @@ const Footer = () => {
                         <h1 className="text-2xl font-extrabold tracking-wide">
                             .f1anatics
                         </h1>
-                        <p className="text-sm mb-4">More than fans</p>
+                        <p className="text-sm mb-4">Повече от фенове</p>
                         <p className="text-sm text-gray-400">
-                            We are not only fans of F1. We are obsessed with all
-                            the details and information that make up our beloved
-                            sport, we analyse situations to understand and make
-                            You understand the world of F1 better with each
-                            article. We are F1anatics, we are more then fans.
+                            Ние не сме само фенове на F1. Ние сме обсебени от
+                            всички подробности и информация, които съставляват
+                            нашия любим спорт, ние анализираме ситуации, за да
+                            разберем и да ви накараме да разберете по-добре
+                            света на F1 с всяка статия. Ние сме F1anatics, ние
+                            сме повече от фенове.
                         </p>
                     </div>
                     <div className="lg:justify-self-center">
@@ -55,25 +56,27 @@ const Footer = () => {
                     </div>
                     <div className="lg:justify-self-end">
                         <h1 className="text-lg font-bold mb-1">
-                            Subscribe to our newsletter
+                            Абонарийте се за нашият нюзлетър
                         </h1>
                         <input
-                            placeholder="enter your email"
+                            placeholder="добави своя имейл"
                             type="text"
                             className="px-2 w-full h-8 bg-gray-600 outline-none text-sm"
                         />
-                        <button className="subscribeBtn">Subscribe</button>
+                        <button className="subscribeBtn">Абониране</button>
                     </div>
                 </div>
                 <hr className="w-[90%] mx-auto mt-12 mb-12" />
                 <div className="flex flex-col justify-center items-center">
-                <div className="text-white flex flex-row items-center justify-center gap-4">
-                    <FaYoutube size={30} />
-                    <FaFacebook size={24} />
-                    <FaInstagram size={25} />
-                    <BsTwitterX size={23} />
-                </div>
-                <p className="text-gray-400 text-sm mt-3">Check out our social media accounts for more.</p>
+                    <div className="text-white flex flex-row items-center justify-center gap-4">
+                        <FaYoutube size={30} />
+                        <FaFacebook size={24} />
+                        <FaInstagram size={25} />
+                        <BsTwitterX size={23} />
+                    </div>
+                    <p className="text-gray-400 text-sm mt-3">
+                        Разгледайте нашите социални мрежи.
+                    </p>
                 </div>
             </Container>
         </div>
