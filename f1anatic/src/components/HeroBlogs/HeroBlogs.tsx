@@ -13,10 +13,10 @@ const HeroBlogs = () => {
                     {blogPosts.map((blog) => (
                         <div
                             key={blog.title}
-                            className="flex flex-col lg:flex-row gap-6 items-center lg:items-start
+                            className="flex flex-col lg:flex-row gap-6 lg:items-start
                             bg-gray-100 lg:bg-transparent"
                         >
-                            <div className="lg:max-w-[400px] min-w-[300px] lg:min-w-[400px]">
+                            <div className="flex items-center justify-center lg:max-w-[400px] min-w-[200px] lg:min-w-[400px]">
                                 <Image
                                     src={blog.image}
                                     alt="blogImage"
@@ -24,7 +24,7 @@ const HeroBlogs = () => {
                                     height={300}
                                 />
                             </div>
-                            <div className="flex flex-col px-5 min-w-[300px] ">
+                            <div className="flex flex-col px-5 min-w-[200px]">
                                 <h1 className="lg:mt-7 mb-2 text-xl font-bold">
                                     {blog.title}
                                 </h1>
