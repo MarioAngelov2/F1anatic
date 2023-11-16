@@ -8,7 +8,7 @@ const Blogs = async () => {
     const blogsData = await xataClient.db.blogs.getMany();
 
     return (
-        <div className="px-8 mt-7 h-screen">
+        <div className="px-2 md:px-8 mt-4 md:mt-7 h-screen">
             <Container>
                 <BlogList blogs={blogsData} />
             </Container>
