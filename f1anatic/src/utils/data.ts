@@ -7,22 +7,21 @@ export const navLinks = [
     { name: ".пилоти", path: "/" },
     { name: ".отбори", path: "/" },
     { name: ".контакти", path: "/" },
-    { name: ".добави блог", path: "/add-blog" },
 ];
 
 export const webLinks = [
-    { name: "All Blogs", path: "/" },
-    { name: "Current Drivers", path: "/" },
-    { name: "Current Teams", path: "/" },
-    { name: "Profile", path: "/" },
-    { name: "Login", path: "/" },
-    { name: "Sign Up", path: "/" },
+    { name: "Всички статии", path: "/blogs" },
+    { name: "Пилоти", path: "/" },
+    { name: "Отбори", path: "/" }, 
+    { name: "Профил", path: "/" },
+    { name: "Вход", path: "/sign-in" },
+    { name: "Регистрация", path: "/sign-up" },
 ];
 
 export const webLinks2 = [
-    { name: "About us", path: "/" },
-    { name: "Contact us", path: "/" },
-    { name: "SEO map", path: "/" },
+    { name: "За нас", path: "/" },
+    { name: "Контакти", path: "/" },
+    { name: "SEO карта", path: "/" },
 ];
 
 export const blogPosts = [
