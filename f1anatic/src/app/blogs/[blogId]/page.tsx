@@ -37,9 +37,9 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
                     </div>
                 </div>
             ))}
-            <div className="w-screen bg-white pt-1">
+            <div className="w-screen bg-white pt-1 pb-8">
                 <Container>
-                    <div className="min-h-screen px-4 md:px-8 lg:px-24 z-20 bg-white w-full">
+                    <div className="h-full px-4 md:px-8 lg:px-24 z-20 bg-white w-full">
                         <h1 className="mt-8 mb-2 font-bold text-lg">
                             {blogData?.articleOneTitle}
                         </h1>
