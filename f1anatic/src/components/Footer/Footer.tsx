@@ -9,7 +9,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 const Footer = () => {
     return (
-        <div className="bg-gray-800 py-12">
+        <div className="bg-gray-800 py-12 z-30">
             <Container>
                 <div className="text-white px-8 lg:px-24 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-0">
                     <div className="justify-self-start">
@@ -73,7 +73,7 @@ const Footer = () => {
                     <FaInstagram size={25} />
                     <BsTwitterX size={23} />
                 </div>
-                <p className="text-gray-400 text-sm mt-3">Check out our social media accounts for mode.</p>
+                <p className="text-gray-400 text-sm mt-3">Check out our social media accounts for more.</p>
                 </div>
             </Container>
         </div>
