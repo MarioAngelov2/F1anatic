@@ -33,7 +33,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
                             {blogData.blogTitle}
                         </h1>
                         <p className="mt-1">
-                            {moment(blogData.createdAt).calendar()}
+                            {moment(blogData.createdAt).calendar("DD/MM/YYYY")}
                         </p>
                     </div>
                 </div>

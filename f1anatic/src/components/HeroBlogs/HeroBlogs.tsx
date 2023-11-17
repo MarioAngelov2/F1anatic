@@ -1,9 +1,8 @@
 import React from "react";
 import Container from "../Container";
 import Image from "next/image";
-import { blogPosts } from "@/utils/data";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { BlogsRecord, getXataClient } from "@/xata";
+import { getXataClient } from "@/xata";
 import Link from "next/link";
 import { truncateText } from "@/utils/truncateText";
 

@@ -13,9 +13,8 @@ const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
     return (
         <div className="grid grid-cols-1 xl:grid-cols-2 mx-auto gap-4">
             {blogs.map((blog) => (
-                <Link href={`/blogs/${blog.id}`}>
+                <Link key={blog.id} href={`/blogs/${blog.id}`}>
                     <div
-                        key={blog.id}
                         className="flex flex-row gap-4 bg-gray-100 hover:shadow-lg hover:bg-white
                         transition duration-300 ease-in-out cursor-pointer"
                     >
