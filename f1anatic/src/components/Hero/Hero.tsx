@@ -1,29 +1,32 @@
 import Image from "next/image";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { BlogsRecord, getXataClient } from "@/xata";
+import { truncateText } from "@/utils/truncateText";
+import moment from "moment";
 
-const Hero = () => {
+const xataClient = getXataClient();
+
+const Hero = async () => {
+    const blogData = await xataClient.db.blogs.read("rec_clb6b6kh3pss3b0febb0");
+
     return (
         <div className="px-8 lg:px-24 h-full">
             {/* First row */}
             <div className="flex flex-col lg:flex-row gap-2 lg:gap-8 items-center mt-8">
                 <div className="flex-1 lg:mt-12">
                     <h1 className="text-4xl font-bold">
-                        Formula 1 Car Release Dates for the 2023 Season
+                        {truncateText(blogData?.blogTitle!, 68)}
                     </h1>
                 </div>
                 <div className="flex-1 mt-4 lg:mt-12">
                     <p className="mb-2">
-                        Most of the teams has accounced the release date of
-                        their new f1 cars and liveries and we have gathered them
-                        for you!
+                        {truncateText(blogData?.titePreview!, 95)}
                     </p>
                     <div>
-                        <button className="btnPrimary group">
-                            Read more
-                            <FaArrowRightLong
-                                className="group-hover:translate-x-1 transition ease-in-out"
-                            />
+                        <button className="btnPrimary group w-[200px]">
+                            Прочети повече
+                            <FaArrowRightLong className="group-hover:translate-x-1 transition ease-in-out" />
                         </button>
                     </div>
                 </div>
@@ -36,7 +39,11 @@ const Hero = () => {
             >
                 <div className="flex items-center justify-center max-h-[300px] lg:max-h-[420px]">
                     <Image
-                        src="/main.png"
+                        src={
+                            blogData
+                                ? blogData?.blogImages![0].url
+                                : "defaultImage"
+                        }
                         alt="main_image"
                         width={2000}
                         height={500}
@@ -44,7 +51,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-            <p className="mt-4 text-xs md:text-base">Posted 9 months ago</p>
+            <p className="mt-4 text-xs md:text-base">Публикувано {moment(blogData?.createdAt).format("DD/MM/YYYY")}</p>
         </div>
     );
 };
