@@ -27,7 +27,7 @@ const BlogDetails = async ({ params }: { params: { blogId: string } }) => {
                     </div>
                     <div
                         className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
-                        text-white lg:text-center pl-10 pr-10  md:w-[80%] xl:w-[70%] 2xl:w-[50%]"
+                        text-white lg:text-center pl-10 pr-10  md:w-[80%] xl:w-[70%] 2xl:w-[50%] w-full"
                     >
                         <h1 className="text-4xl font-bold">
                             {blogData.blogTitle}
