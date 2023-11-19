@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { BlogsRecord, getXataClient } from "@/xata";
 import { truncateText } from "@/utils/truncateText";
 import moment from "moment";
+import Link from "next/link";
 
 const xataClient = getXataClient();
 
@@ -24,10 +25,10 @@ const Hero = async () => {
                         {truncateText(blogData?.titePreview!, 95)}
                     </p>
                     <div>
-                        <button className="btnPrimary group w-[200px]">
+                        <Link href={`/blogs/${blogData?.id}`} className="btnPrimary group w-[200px]">
                             Прочети повече
                             <FaArrowRightLong className="group-hover:translate-x-1 transition ease-in-out" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
