@@ -4,14 +4,14 @@ import image3 from "../../public/main (3).png";
 
 export const navLinks = [
     { name: ".блог", path: "/blogs" },
-    { name: ".пилоти", path: "/" },
+    { name: ".пилоти", path: "/drivers" },
     { name: ".отбори", path: "/" },
     { name: ".контакти", path: "/" },
 ];
 
 export const webLinks = [
     { name: "Всички статии", path: "/blogs" },
-    { name: "Пилоти", path: "/" },
+    { name: "Пилоти", path: "/drivers" },
     { name: "Отбори", path: "/" }, 
     { name: "Профил", path: "/" },
     { name: "Вход", path: "/sign-in" },
